@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<p>
+    Deck ID: @ViewBag.DeckId
+   
+</p>
+<table>
+    <tr>
+        @foreach (var c in ViewBag.Cards)
+        {
+            <td> 
+                @c["value"] of @c["suit"]<br />
+                <img src="@c["image"]" />
+            </td>
+        }
+    </tr>
+</table>
